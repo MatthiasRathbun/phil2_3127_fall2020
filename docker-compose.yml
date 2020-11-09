@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  client:
+    image: jupyter/datascience-notebook
+    container_name: phil3127_paper2 
+    runtime: nvidia
+    volumes:
+      - "./data:/home/jovyan/work"
+    stdin_open: true
+    ports:
+      - "10000:8888"
